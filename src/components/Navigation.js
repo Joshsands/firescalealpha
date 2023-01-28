@@ -7,19 +7,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
-import { Badge } from 'react-bootstrap';
 
 
 function Navigation() {
   return (
     <Navbar bg="primary" expand="lg" sticky='top'>
-      <Container fluid>
-        
+      <Container>
         <Navbar.Brand href="#" className='logo'><h1>FireScale Design</h1></Navbar.Brand>
+
+
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
+
           <Nav
-            className="me-auto my-2 my-lg-2"
+            className="me-auto my-2 my-lg-2 m-5"
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
@@ -46,7 +47,7 @@ function Navigation() {
             </Nav.Link>
             <Nav.Link href="#login">
               Login
-              </Nav.Link>
+            </Nav.Link>
           </Nav>
           <Form className="d-flex">
             <Form.Control
@@ -57,6 +58,8 @@ function Navigation() {
             />
             <Button variant="outline-secondary">Search</Button>
           </Form>
+
+
         </Navbar.Collapse>
       </Container>
     </Navbar>
