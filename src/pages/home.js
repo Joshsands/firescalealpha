@@ -1,15 +1,16 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
 import { Container, Row } from "react-bootstrap"
+import InfoCards from "../components/InfoCards";
 
 function Home() {
     return (
         <Container>
-            <Row>
-                This is homepage
+            <Row className="mb-5">
+                <ContactForm />
             </Row>
             <Row>
-                <ContactForm />
+                <InfoCards />
             </Row>
         </Container>
     )

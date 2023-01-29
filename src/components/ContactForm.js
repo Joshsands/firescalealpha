@@ -5,7 +5,7 @@ function ContactForm() {
     return (
         <Container>
             <Form>
-                <h1 className="text-center">Need a Design?</h1>
+                <h1 className="text-center m-2">Need a Fire Alarm Design?</h1>
                 <Form.Group className="mb-3" controlId="company">
                     <Form.Label>Company</Form.Label>
                     <Form.Control type="text" placeholder="Fire Protection Company" />
@@ -26,8 +26,8 @@ function ContactForm() {
                     <Form.Control as="textarea" rows={6} />
                 </Form.Group>
 
-                <Form.Group className="mb-3">
-                    <Button type="submit">Submit</Button>
+                <Form.Group className="d-grid w-50 mx-auto">
+                    <Button type="submit" size="lg"><h2>Submit</h2></Button>
                 </Form.Group>
             </Form>
         </Container>
