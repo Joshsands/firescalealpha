@@ -4,7 +4,7 @@ import { Container, Form, Button } from "react-bootstrap"
 function ContactForm() {
     return (
         <Container>
-            <Form>
+            <Form className="w-50 mx-auto">
                 <h1 className="text-center m-2 text-light">Need a Fire Alarm Design?</h1>
                 <Form.Group className="mb-3" controlId="company">
                     <Form.Label className="text-light">Company</Form.Label>
@@ -27,7 +27,7 @@ function ContactForm() {
                 </Form.Group>
 
                 <Form.Group className="d-grid mb-3 w-50 mx-auto">
-                    <Button type="submit" size="lg"><h2>Submit</h2></Button>
+                    <Button type="submit" variant="secondary" size="lg"><h2>Submit</h2></Button>
                 </Form.Group>
             </Form>
         </Container>

@@ -1,19 +1,20 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
-// import Container from 'react-bootstrap/Container';
-import Form from 'react-bootstrap/Form';
+import { Link } from "react-router-dom";
+// import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+// import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
-import Image from 'react-bootstrap/Image'
 import fslogo from '../assets/fslogo.png'
 
 function Navigation() {
   return (
-    <Navbar bg="light" expand="lg" sticky='top' className='align-items-center'>
-        <Navbar.Brand href="#"><img style={{ maxHeight: '150px' }} src={fslogo} /></Navbar.Brand>
+    <Container>
+    <Navbar bg="light" expand="lg" sticky='top' className='mx-4'>
+        <Navbar.Brand as={Link} to="/"><img style={{ maxHeight: '150px' }} src={fslogo} /></Navbar.Brand>
 
 
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -24,10 +25,12 @@ function Navigation() {
             style={{ maxHeight: '300px', textAlign: 'center' }}
             navbarScroll
           >
-            <h2><Nav.Link href="#home">Home</Nav.Link></h2>
-            <h2><Nav.Link href="#publications">Publications</Nav.Link></h2>
-            <h2><Nav.Link href="#datasheets">Datasheets</Nav.Link></h2>
-            <h2><Nav.Link href="#portfolio">Portfolio</Nav.Link></h2>
+            <Nav.Link as={Link} to="/">
+              <h2>Home</h2>
+              </Nav.Link>
+            <Nav.Link as={Link} to="/publications"><h2>Publications</h2></Nav.Link>
+            <Nav.Link as={Link} to="/datasheets"><h2>Datasheets</h2></Nav.Link>
+            <Nav.Link as={Link} to="/portfolio"><h2>Portfolio</h2></Nav.Link>
 
             {/* <NavDropdown title="Quote" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#design">
@@ -68,6 +71,7 @@ function Navigation() {
 
         </Navbar.Collapse>
     </Navbar>
+    </Container>
   );
 }
 
