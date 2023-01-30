@@ -5,3 +5,18 @@
 .logo {
   font-family: Garamond, serif;
 }
+
+.fslogo {
+  max-width: 25%;
+  max-height: 25%;
+}
+
+.fslogoname {
+scale: 50%;
+}
+
+.bgimage {
+  background-image: url('./assets/austinbackdrop.jpg');
+  background-size: cover;
+  background-position: center;
+}

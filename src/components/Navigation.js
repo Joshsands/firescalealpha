@@ -7,12 +7,13 @@ import Navbar from 'react-bootstrap/Navbar';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
-
+import Image from 'react-bootstrap/Image'
+import fslogo from '../assets/fslogo.png'
 
 function Navigation() {
   return (
     <Navbar bg="light" expand="lg" sticky='top' className='align-items-center'>
-        <Navbar.Brand href="#" className='logo'><h1>FireScale Design</h1></Navbar.Brand>
+        <Navbar.Brand href="#"><img style={{ maxHeight: '150px' }} src={fslogo} /></Navbar.Brand>
 
 
         <Navbar.Toggle aria-controls="navbarScroll" />
