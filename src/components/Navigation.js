@@ -20,8 +20,8 @@ function Navigation() {
         <Navbar.Collapse id="navbarScroll">
 
           <Nav
-            className="my-lg-2 m-5 mx-auto"
-            style={{ maxHeight: '100px' }}
+            className="mx-auto"
+            style={{ maxHeight: '300px', textAlign: 'center' }}
             navbarScroll
           >
             <h2><Nav.Link href="#home">Home</Nav.Link></h2>
@@ -55,7 +55,7 @@ function Navigation() {
 
           </Nav>
 
-          <Form className="d-flex">
+          {/* <Form className="d-flex">
             <Form.Control
               type="search"
               placeholder="Search"
@@ -63,7 +63,7 @@ function Navigation() {
               aria-label="Search"
             />
             <Button variant="secondary">Search</Button>
-          </Form>
+          </Form> */}
 
 
         </Navbar.Collapse>

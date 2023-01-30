@@ -26,7 +26,7 @@ function ContactForm() {
                     <Form.Control as="textarea" rows={6} />
                 </Form.Group>
 
-                <Form.Group className="d-grid w-50 mx-auto">
+                <Form.Group className="d-grid mb-3 w-50 mx-auto">
                     <Button type="submit" size="lg"><h2>Submit</h2></Button>
                 </Form.Group>
             </Form>
