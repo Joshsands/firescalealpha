@@ -11,7 +11,7 @@ import '../App.css'
 
 function Navigation() {
   return (
-    <Navbar bg="primary" expand="lg" sticky='top' className='align-items-center'>
+    <Navbar bg="light" expand="lg" sticky='top' className='align-items-center'>
         <Navbar.Brand href="#" className='logo'><h1>FireScale Design</h1></Navbar.Brand>
 
 
@@ -19,14 +19,14 @@ function Navigation() {
         <Navbar.Collapse id="navbarScroll">
 
           <Nav
-            className="my-lg-2 m-5"
+            className="my-lg-2 m-5 mx-auto"
             style={{ maxHeight: '100px' }}
             navbarScroll
           >
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#publications">Publications</Nav.Link>
-            <Nav.Link href="#datasheets">Datasheets</Nav.Link>
-            <Nav.Link href="#portfolio">Portfolio</Nav.Link>
+            <h2><Nav.Link href="#home">Home</Nav.Link></h2>
+            <h2><Nav.Link href="#publications">Publications</Nav.Link></h2>
+            <h2><Nav.Link href="#datasheets">Datasheets</Nav.Link></h2>
+            <h2><Nav.Link href="#portfolio">Portfolio</Nav.Link></h2>
 
             {/* <NavDropdown title="Quote" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#design">

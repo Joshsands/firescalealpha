@@ -1,6 +1,7 @@
 import './App.css';
 import Navigation from './components/Navigation';
 import Home from './pages/home';
+import './App.css'
 
 function App() {
   return (
