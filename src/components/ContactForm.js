@@ -4,7 +4,7 @@ import { Container, Form, Button } from "react-bootstrap"
 function ContactForm() {
     return (
         <Container>
-            <Form className="w-50 mx-auto">
+            <Form  className="resize mx-auto">
                 <h1 className="text-center m-2 text-light">Need a Fire Alarm Design?</h1>
                 <Form.Group className="mb-3" controlId="company">
                     <Form.Label className="text-light">Company</Form.Label>
