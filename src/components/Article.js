@@ -1,17 +1,19 @@
 import React, {useState, useEffect} from "react";
 import SingleArticle from './SingleArticle'
-import { Card, CardGroup, Row } from "react-bootstrap";
+import { Card, CardGroup, Row, Button } from "react-bootstrap";
 
-
+// const url = 'https://api.currentsapi.services/v1/latest-news?' +
+// 'language=us&' +
+// 'apiKey=eJmAOuVBY5PUoRdRLLIEgrI88D2Te2ayUsmkRnz9DTeU7DhH';
 
 
 export default function Article() {
 
 
 
-    const [data, setData] = useState(null);
+    const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const [error, setError] = useState([]);
 
     // useEffect(() => {
 
@@ -25,26 +27,60 @@ export default function Article() {
     //     .then(data => setPosts(data));
     // }, []);
 
-    useEffect(() => {
-
-        const url = 'https://api.currentsapi.services/v1/latest-news?' +
-        'language=us&' +
-        'apiKey=eJmAOuVBY5PUoRdRLLIEgrI88D2Te2ayUsmkRnz9DTeU7DhH';
-
-      fetch(url)
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(
-            `This is an HTTP error: The status is ${response.status}`
-          );
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-BingApis-SDK': 'true',
+            'X-RapidAPI-Key': '6f674d8efbmsh45b3fe442ca5e92p147708jsnf79016036a61',
+            'X-RapidAPI-Host': 'bing-news-search1.p.rapidapi.com'
         }
-        return response.json();
-      })
-      .then((actualData) => console.log(actualData))
-      .catch((err) => {
-        console.log(err.message);
-      });
+    };
+    
+
+        useEffect(() => {
+
+
+            fetch('https://bing-news-search1.p.rapidapi.com/news/trendingtopics?textFormat=Raw&safeSearch=Off', options)
+            .then(response => response.json())
+            .then(response => setPosts(response))
+            .catch(err => console.error(err));
     }, []);
+
+    console.log(posts.value[0])
+
+    // const getPosts = () => {
+    //     fetch(url)
+    //       .then((response) => response.json())
+    //       .then((data) => setPosts(data));
+    //   };
+
+    //   useEffect(() => {
+    //     getPosts();
+    //   }, []);
+
+    //   const getNewPost = () => {
+    //     getPosts();
+    //     console.log(posts)
+    //   }
+
+
+
+    // useEffect(() => {
+
+    //   fetch(url)
+    //   .then((response) => {
+    //     if (!response.ok) {
+    //       throw new Error(
+    //         `This is an HTTP error: The status is ${response.status}`
+    //       );
+    //     }
+    //     return response.json();
+    //   })
+    //   .then((actualData) => console.log(actualData))
+    //   .catch((err) => {
+    //     console.log(err.message);
+    //   });
+    // }, []);
 
 
     const articles = {
