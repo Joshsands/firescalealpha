@@ -13,7 +13,7 @@ import fslogo from '../assets/fslogo.png'
 function Navigation() {
   return (
     <Container>
-    <Navbar bg="light" expand="lg" sticky='top' className='mx-4'>
+    <Navbar bg="light" expand="lg" sticky='top' className='mx-4 mb-2'>
         <Navbar.Brand as={Link} to="/"><img style={{ maxHeight: '150px' }} src={fslogo} /></Navbar.Brand>
 
 
