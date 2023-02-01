@@ -5,6 +5,7 @@ import Container from 'react-bootstrap/Container';
 // import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import Badge from 'react-bootstrap/Badge';
 // import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../App.css'
@@ -25,12 +26,10 @@ function Navigation() {
             style={{ maxHeight: '300px', textAlign: 'center' }}
             navbarScroll
           >
-            <Nav.Link as={Link} to="/">
-              <h2>Home</h2>
-              </Nav.Link>
-            <Nav.Link as={Link} to="/publications"><h2>Publications</h2></Nav.Link>
-            <Nav.Link as={Link} to="/datasheets"><h2>Datasheets</h2></Nav.Link>
-            <Nav.Link as={Link} to="/portfolio"><h2>Portfolio</h2></Nav.Link>
+            <Nav.Link as={Link} to="/"><Badge bg='danger'><h2>Home</h2></Badge></Nav.Link>
+            <Nav.Link as={Link} to="/portfolio"><Badge bg='danger'><h2>Portfolio</h2></Badge></Nav.Link>
+            <Nav.Link as={Link} to="/datasheets"><Badge bg='danger'><h2>Datasheets</h2></Badge></Nav.Link>
+            <Nav.Link as={Link} to="/publications"><Badge bg='danger'><h2>Publications</h2></Badge></Nav.Link>
 
             {/* <NavDropdown title="Quote" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#design">

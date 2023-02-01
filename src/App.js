@@ -1,6 +1,6 @@
 import './App.css';
 import Navigation from './components/Navigation';
-import Home from './pages/home';
+import Home from './pages/Home';
 import Publications from './pages/Publications';
 import Datasheets from './pages/Datasheets';
 import Portfolio from './pages/Portfolio';

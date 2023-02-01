@@ -15,17 +15,7 @@ export default function Article() {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState([]);
 
-    // useEffect(() => {
-
-    //     var url = 'https://api.currentsapi.services/v1/latest-news?' +
-    //     'language=us&' +
-    //     'apiKey=eJmAOuVBY5PUoRdRLLIEgrI88D2Te2ayUsmkRnz9DTeU7DhH';
-    //     var req = new Request(url);
-
-    //   fetch(req)
-    //     .then(res => res.json())
-    //     .then(data => setPosts(data));
-    // }, []);
+    const url ='https://bing-news-search1.p.rapidapi.com/news?category=business&safeSearch=Off&textFormat=Raw'
 
     const options = {
         method: 'GET',
@@ -40,47 +30,14 @@ export default function Article() {
         useEffect(() => {
 
 
-            fetch('https://bing-news-search1.p.rapidapi.com/news/trendingtopics?textFormat=Raw&safeSearch=Off', options)
+            fetch(url, options)
             .then(response => response.json())
-            .then(response => setPosts(response))
+            .then(response => setPosts(response.value))
             .catch(err => console.error(err));
     }, []);
 
-    console.log(posts.value[0])
 
-    // const getPosts = () => {
-    //     fetch(url)
-    //       .then((response) => response.json())
-    //       .then((data) => setPosts(data));
-    //   };
-
-    //   useEffect(() => {
-    //     getPosts();
-    //   }, []);
-
-    //   const getNewPost = () => {
-    //     getPosts();
-    //     console.log(posts)
-    //   }
-
-
-
-    // useEffect(() => {
-
-    //   fetch(url)
-    //   .then((response) => {
-    //     if (!response.ok) {
-    //       throw new Error(
-    //         `This is an HTTP error: The status is ${response.status}`
-    //       );
-    //     }
-    //     return response.json();
-    //   })
-    //   .then((actualData) => console.log(actualData))
-    //   .catch((err) => {
-    //     console.log(err.message);
-    //   });
-    // }, []);
+  
 
 
     const articles = {
@@ -115,19 +72,23 @@ export default function Article() {
 
         <div>
             {/* 👇️ iterate object VALUES */}
-            {Object.entries(articles).map((value) => {
-            //    console.log(value)
+            {Object.entries(posts).map(([key, post]) => {
+               if (post.image === undefined) return null;
+            //    console.log(post.image.thumbnail.contentUrl)
+
                 return (
                         
 
-<Row className="mx-auto" key={value[1].id}>
+<Row className="mx-auto" key={key}>
+
+
 <CardGroup>
 <Card bg='light' className='m-2 infoCard'>
-<Card.Img variant="top"  className='h-50' src={value[1].image} alt={value[1].id} />
+<Card.Img variant="top"  className='w-25 h-25 d-flex justify-content-center mx-auto mt-4' src={post.image.thumbnail.contentUrl} alt={post.name} />
 <Card.Body>
-<Card.Title className='bg-secondary text-center m-2 h-50'><h3>{value[1].title}</h3></Card.Title>
-<Card.Text className='mb-3'>
-{value[1].description}
+<Card.Title className='bg-secondary text-center m-2 h-50 d-flex justify-content align-items-center'><h3>{post.name}</h3></Card.Title>
+<Card.Text className='mb-3 text-center'>
+{post.description}
 </Card.Text>
 </Card.Body>
 </Card>
