@@ -73,7 +73,7 @@ export default function Article() {
         <div>
             {/* 👇️ iterate object VALUES */}
             {Object.entries(posts).map(([key, post]) => {
-               if (post.image === undefined) return null;
+               if (!post.image) return null;
             //    console.log(post.image.thumbnail.contentUrl)
 
                 return (
@@ -90,6 +90,10 @@ export default function Article() {
 <Card.Text className='mb-3 text-center'>
 {post.description}
 </Card.Text>
+
+
+
+
 </Card.Body>
 </Card>
 </CardGroup>

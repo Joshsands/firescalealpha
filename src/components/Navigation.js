@@ -27,9 +27,10 @@ function Navigation() {
             navbarScroll
           >
             <Nav.Link as={Link} to="/"><Badge bg='danger'><h3>Home</h3></Badge></Nav.Link>
+            <Nav.Link as={Link} to="/about"><Badge bg='danger'><h3>About</h3></Badge></Nav.Link>
             <Nav.Link as={Link} to="/portfolio"><Badge bg='danger'><h3>Portfolio</h3></Badge></Nav.Link>
-            <Nav.Link as={Link} to="/datasheets"><Badge bg='danger'><h3>Datasheets</h3></Badge></Nav.Link>
-            <Nav.Link as={Link} to="/publications"><Badge bg='danger'><h3>Publications</h3></Badge></Nav.Link>
+            {/* <Nav.Link as={Link} to="/datasheets"><Badge bg='danger'><h3>Datasheets</h3></Badge></Nav.Link> */}
+            {/* <Nav.Link as={Link} to="/publications"><Badge bg='danger'><h3>Publications</h3></Badge></Nav.Link> */}
 
             {/* <NavDropdown title="Quote" id="navbarScrollingDropdown">
               <NavDropdown.Item href="#design">

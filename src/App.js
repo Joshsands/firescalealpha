@@ -6,7 +6,7 @@ import Datasheets from './pages/Datasheets';
 import Portfolio from './pages/Portfolio';
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-
+import About from './pages/About';
 
 function App() {
   return (
@@ -20,6 +20,7 @@ function App() {
 <Route exact path="/publications" element={<Publications />} />
 <Route exact path="/datasheets" element={<Datasheets />} />
 <Route exact path="/portfolio" element={<Portfolio />} />
+<Route exact path="/about" element={<About />} />
 
 </Routes>
 

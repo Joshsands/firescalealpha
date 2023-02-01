@@ -1,14 +1,12 @@
 import React from "react";
 import Container from 'react-bootstrap/Container';
-import Project from "../components/Project";
+import AboutComp from '../components/AboutComp'
 
-function Portfolio() {
+function About() {
     return (
         <Container>
-
-            <Project />
-            
+<AboutComp />
         </Container>
     )
 }
-export default Portfolio;
+export default About;

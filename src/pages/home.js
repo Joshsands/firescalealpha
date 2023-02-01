@@ -17,7 +17,7 @@ function Home() {
             </Row>
 
 <Row className="d-flex justify-content-center align-items-center mt-5 w-50 mx-auto">
-   <a className="emailLink" href="mailto:info@firescaledesign.com"> <h3 className="text-center bg-danger text-light roundIntro py-1">Contact us at info@firescaledesign.com</h3> </a>
+   <a className="emailLink" href="mailto:info@firescaledesign.com"> <h3 className="text-center bg-danger text-light roundIntro py-1">Contact us at: info@firescaledesign.com</h3> </a>
 </Row>
 
 <Row className="d-flex justify-content-center align-items-center w-50 mx-auto mb-5">
