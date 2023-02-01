@@ -11,12 +11,17 @@ function Home() {
         <Container>
 
             <Row className="mb-5 bgimage">
+                <h1 className="bg-light py-2 my-2 text-danger d-flex align-items-center justify-content-center mx-auto">Superior Fire Alarm System Drawings</h1>
 <img src={fslogoname} className="mx-auto fslogoname" />
                 <ContactForm />
             </Row>
 
-<Row className="d-flex justify-content-center align-items-center mb-5">
-   <a className="emailLink" href="mailto:info@firescaledesign.com"> <h1 className="text-center bg-danger text-light roundIntro py-1">Contact us at info@firescaledesign.com</h1> </a>
+<Row className="d-flex justify-content-center align-items-center mt-5 w-50 mx-auto">
+   <a className="emailLink" href="mailto:info@firescaledesign.com"> <h3 className="text-center bg-danger text-light roundIntro py-1">Contact us at info@firescaledesign.com</h3> </a>
+</Row>
+
+<Row className="d-flex justify-content-center align-items-center w-50 mx-auto mb-5">
+   <a className="phoneLink" href="tel:5125545803"> <h3 className="text-center bg-danger text-light roundIntro py-1">(512) 554-5803</h3> </a>
 </Row>
 
             <Row>

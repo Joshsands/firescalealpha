@@ -5,7 +5,7 @@ function ContactForm() {
     return (
         <Container>
             <Form  className="resize mx-auto">
-                <h1 className="text-center mb-5 p-1 text-light bg-danger roundIntro">Need a Fire Alarm Design?</h1>
+                <h2 className="text-center mb-5 p-1 text-light bg-danger roundIntro">Need a Fire Alarm Design?</h2>
                 <Form.Group className="mb-3" controlId="company">
                     <Form.Label className="bg-danger text-light p-1 roundTitles">Company</Form.Label>
                     <Form.Control className="bg-light" type="text" placeholder="Fire Protection Company" />
