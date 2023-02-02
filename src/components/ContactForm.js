@@ -26,8 +26,7 @@ function ContactForm() {
     const handleSubmit = async (e) => {
         e.preventDefault()
 
-        await addDoc(usersCollectionRef, { name: name, company: company, email: email, phone: phone });
-        setName('')
+        await addDoc(usersCollectionRef, { company: company, email: email, phone: phone, message: message, });
         setEmail('')
         setCompany('')
         setPhone('')
