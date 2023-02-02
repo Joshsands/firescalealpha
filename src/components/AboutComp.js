@@ -1,20 +1,23 @@
 import React from "react";
-import { Row } from "react-bootstrap";
+import { Row, Card, CardGroup, ListGroup } from "react-bootstrap";
 
 
 function Project() {
     return (
-<div>
+        <CardGroup>
+        <Card bg='light' className='m-2 infoCard'>
 <Row className="mx-auto my-2">
-<h1>
+
+<h1 className="text-center">
 The Advantages of our Fire Alarm CAD Designs for Your Fire Protection Business
 </h1>
+
 </Row>
 
 <Row className="mx-auto mb-4">
-<h3>
+<h4 className="text-center">
 A fire alarm CAD design is a critical component of any building's fire safety system. It provides a detailed and accurate representation of the fire alarm system, ensuring that it is properly installed and functional. In this article, we will discuss the benefits of utilizing our fire alarm designs for your fire protection business.
-</h3>
+</h4>
 </Row>
 
 <Row className="mx-auto">
@@ -49,7 +52,8 @@ Better Project Management: Our fire alarm designs can be used to manage the inst
 By utilizing our fire alarm design for your fire protection company, you can improve the safety and efficiency of your fire alarm system, and gain a competitive advantage in the industry.
 </h4>
 </Row>
-</div>
+</Card>
+</CardGroup>
     )
 }
 
