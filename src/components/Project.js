@@ -2,6 +2,8 @@ import React, {useState, useEffect} from "react";
 import { Card, CardGroup, Row, Button, Col } from "react-bootstrap";
 import Carousel from 'react-bootstrap/Carousel';
 import p1 from '../assets/projects/p1.png'
+import p2 from '../assets/projects/p2.png'
+import p3 from '../assets/projects/p3.png'
 
 const projects = {
 
@@ -43,41 +45,41 @@ function Project() {
 <Row className="mx-auto" key={key}>
 <Col>
 
-<Carousel>
+<Carousel variant="dark">
       <Carousel.Item>
         <img
           className="d-block w-100"
           src={p1}
-          alt="First slide"
+          alt="Fire Alarm Drawing Details Page"
         />
         <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          <h3 className="bg-dark text-primary">Fire Alarm Details Page</h3>
+          <p className="bg-dark text-primary">NFPA 72 code compliant fire alarm notes</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={p1}
+          src={p2}
           alt="Second slide"
         />
 
         <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <h3 className="bg-dark text-primary">Fire Alarm System Riser Diagram</h3>
+          <p className="bg-dark text-primary">System layout of all the connected devices</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={p1}
+          src={p3}
           alt="Third slide"
         />
 
         <Carousel.Caption>
-          <h3>Third slide label</h3>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
+          <h3 className="bg-dark text-primary">Fire Alarm Floorplan Layout</h3>
+          <p className="bg-dark text-primary">
+           Fire alarm device location layout
           </p>
         </Carousel.Caption>
       </Carousel.Item>
